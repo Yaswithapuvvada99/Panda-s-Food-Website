@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Restaurant Menu</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+      body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: rgba(0, 0, 0, 0.6); 
+            position: relative;
+            font-family: 'Arial', sans-serif;
+        }
+
+        
+        body::before {
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(REST\ \(2\).jpg); 
+            background-size: cover;
+            background-position: center;
+            z-index: -1; 
+        }
+
+        main {
+            background-color: transparent; 
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
+            width: 100%;
+            box-shadow: 0px 4px 15px rgba(234, 50, 50, 0.2);
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 span {
+            animation: fall 2s ease forwards;
+            opacity: 0;
+            display: inline-block;
+        }
+
+        h1 span:nth-child(1) { animation-delay: 0s; }
+        h1 span:nth-child(2) { animation-delay: 0.1s; }
+        h1 span:nth-child(3) { animation-delay: 0.2s; }
+        h1 span:nth-child(4) { animation-delay: 0.3s; }
+        h1 span:nth-child(5) { animation-delay: 0.4s; }
+        h1 span:nth-child(6) { animation-delay: 0.5s; }
+        h1 span:nth-child(7) { animation-delay: 0.6s; }
+        h1 span:nth-child(8) { animation-delay: 0.7s; }
+
+        @keyframes fall {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Rest of your menu styles */
+        .menu-section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #0e6188;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin-right: 10px;
+        }
+
+        /* Other button styles */
+        button {
+            padding: 10px 15px;
+            background-color:transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #095073;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+       
+    </header>
+    <main>
+        <h1 class="falling">
+            <span>P</span>
+            <span> </span>
+            <span>@</span>
+            <span> </span>
+            <span>n</span>
+            <span> </span>
+            <span>D</span>
+            <span> </span>
+            <span>@</span>
+          </h1>
+          
+        
+        <div class="menu-container">
+            <!-- Starters Section -->
+             
+            <div class="menu-section">
+                <h2>Spicy Foods</h2>
+                <button class="category-btn" id="veg-starters-btn">Italian</button>
+                <button class="category-btn" id="non-veg-starters-btn">American</button>
+                <div class="menu-items" id="veg-starters" style="display: none;">
+					<label>
+						<img src="image/pasta.jpg" alt="Pasta"> 
+						<input type="checkbox" data-price="170"> Pasta-170/-
+					</label>
+                <label>
+                    <img src="image/pizza.jpg" alt="Pizza"> 
+                    <input type="checkbox" data-price="220"> Pizza -220/-
+                </label>
+                <label>
+                    <img src="image/lasagna.webp" alt="Lasagna"> 
+                    <input type="checkbox" data-price="300"> Lasagna-300/-
+                </label>
+                </div>
+                <div class="menu-items" id="non-veg-starters" style="display: none;">
+                    <!-- 15 Non-Veg Starters -->
+                    <label>
+						<img src="image/buger.jpg" alt="Burger">
+						<input type="checkbox" data-price="120"> Burger-120/-</label>
+                    <label>
+						<img src="image/sandwich.jpg" alt="Sandwich">
+						<input type="checkbox" data-price="150">Sandwich-150/-</label>
+                    <label>
+						<img src="image/Hot_dog.jpg" alt="Hot Dog">
+						<input type="checkbox" data-price="220"> Hot Dog-220/-</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+
+            <!-- Biriyani Section -->
+            <div class="menu-section">
+                <h2>Biriyani</h2>
+                <button class="category-btn" id="veg-biriyani-btn">Veg Biriyani</button>
+                <button class="category-btn" id="non-veg-biriyani-btn">Non-Veg Biriyani</button>
+                <div class="menu-items" id="veg-biriyani" style="display: none;">
+                    <!-- 15 Veg Biriyani -->
+                    <label>
+						<img src="image/veg.jpg" alt="Veg">
+						<input type="checkbox" data-price="200"> Hyderabadi Veg Biriyani - ₹200</label>
+                    <label>
+						<img src="image/Paneer.jpg" alt="Paneer">
+						<input type="checkbox" data-price="220"> Paneer Biriyani - ₹220</label>
+                    <label>
+						<img src="image/kaju.jpg" alt="Kaju">
+						<input type="checkbox" data-price="210"> Kaju Pulao Biriyani - ₹210</label>
+
+                    <!-- Add more items up to 15 -->
+                </div>
+                <div class="menu-items" id="non-veg-biriyani" style="display: none;">
+                    <!-- 15 Non-Veg Biriyani -->
+                    <label>
+						<img src="image/chicken.jpg" alt="Chicken">
+						<input type="checkbox" data-price="250"> Chicken Biriyani - ₹250</label>
+                    <label>
+						<img src="image/mutton.jpg" alt="Mutton">
+						<input type="checkbox" data-price="270"> Mutton Biriyani - ₹270</label>
+                    <label>
+						<img src="image/prawn.jpg" alt="Prawn">
+						<input type="checkbox" data-price="290"> Prawn Biriyani - ₹290</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+
+            <!-- Beverages Section -->
+            <div class="menu-section">
+                <h2>Beverages</h2>
+                <button class="category-btn" id="cold-beverages-btn">Milkshakes</button>
+                <button class="category-btn" id="hot-beverages-btn">Mojitos</button>
+                <div class="menu-items" id="cold-beverages" style="display: none;">
+                    <!-- 15 Cold Beverages -->
+                    <label>
+						<img src="image/chocolate_Drink.jpg" alt="Chocolate">
+						<input type="checkbox" data-price="100"> Chocolate-100/-</label>
+                    <label>
+						<img src="image/vanila.png" alt="Vanilla">
+						<input type="checkbox" data-price="70">Vanilla-70/-</label>
+                    <label>
+						<img src="image/oreo.jpg" alt="Oreo">
+						<input type="checkbox" data-price="110">Oreo-110/- </label>
+                    <!-- Add more items up to 15 -->
+                </div>
+                <div class="menu-items" id="hot-beverages" style="display: none;">
+                    <!-- 15 Hot Beverages -->
+                    <label>
+						<img src="image/blue.jpg" alt="Blue Curacaoa">
+						<input type="checkbox" data-price="70"> Blue curacoa-70/-</label>
+                    <label>
+						<img src="image/ginger.jpg" alt="Ginger">
+						<input type="checkbox" data-price="90"> Ginger-90/-</label>
+                    <label>
+						<img src="image/rasp.jpg" alt="Raspberry">
+						<input type="checkbox" data-price="60"> Raspberry-60/-</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+
+            <!-- Desserts Section -->
+            <div class="menu-section">
+                <h2>Desserts</h2>
+                <button class="category-btn" id="indian-desserts-btn">Indian Desserts</button>
+                <button class="category-btn" id="western-desserts-btn">Western Desserts</button>
+                <div class="menu-items" id="indian-desserts" style="display: none;">
+                    <!-- 15 Indian Desserts -->
+                    <label>
+						<img src="image/butter.jpg" alt="Butterscotch">
+						<input type="checkbox" data-price="90"> Butterscotch-90/-</label>
+                    <label>
+						<img src="image/pista.jpg" alt="Pista">
+						<input type="checkbox" data-price="100"> Pista-100/-</label>
+                    <label>
+						<img src="image/ca.webp" alt="Hot Dog">
+						<input type="checkbox" data-price="120"> Custard apple-120/-</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+                <div class="menu-items" id="western-desserts" style="display: none;">
+                    <!-- 15 Western Desserts -->
+                    <label>
+						<img src="image/br.jpg" alt="Brownie">
+						<input type="checkbox" data-price="140"> Chocolate Brownie - ₹140</label>
+                    <label>
+						<img src="image/cc.jpg" alt="Cheesecake">
+						<input type="checkbox" data-price="150"> Cheesecake - ₹150</label>
+                    <label>
+						<img src="image/t.jpg" alt="Tiramisu">
+						<input type="checkbox" data-price="160"> Tiramisu - ₹160</label>
+                    <!-- Add more items up to 15 -->
+                </div>
+            </div>
+        </div>
+
+        <div id="bill">
+            <h2>Total Bill</h2>
+            <p id="bill-details">Select items to see your total bill here.</p>
+        </div>
+
+        <div class="controls">
+            <button id="apply-gst">Apply GST</button>
+            <button id="apply-discount">Apply Discount</button>
+            <button id="checkout">Checkout</button>
+        </div>
+
+        <div id="payment-options" style="display: none;">
+            <h2>Select Payment Method</h2>
+            <button id="phonepe-payment">Pay with PhonePe</button>
+            <button id="cash-payment">Pay with Cash</button>
+        </div>
+
+        <div id="payment-section" style="display: none;">
+            <h2>Processing Payment</h2>
+            <img  src="image/payment.png"  style="width: 150px;">
+            
+        </div>
+        <button id="confirm-payment" style="display: none;">OK</button>
+        <button id="print-receipt">Print Receipt</button>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
